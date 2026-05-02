@@ -13,7 +13,7 @@ export default function Home() {
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [errorNote, setErrorNote] = useState<string | null>(null);
 
-  const apiEndpoint = "http://localhost:5000/api/todos";
+  const apiEndpoint = "/api/todos";
 
   const loadDataFromServer = useCallback(async () => {
     setIsProcessing(true);
