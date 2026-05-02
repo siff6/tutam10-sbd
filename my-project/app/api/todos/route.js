@@ -10,7 +10,7 @@ export async function GET() {
 
 export async function POST(request) {
   await connectDB();
-  const body = await request.json();
-  const newTodo = await Todo.create(body);
+  const { text } = await request.json();
+  const newTodo = await Todo.create({ text });
   return NextResponse.json(newTodo, { status: 201 });
 }
